@@ -3,8 +3,6 @@ package de.olaf_roeder.event.system;
 import de.olaf_roeder.concurrency.EventExecutorService;
 
 import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class SimpleEventSystem {
 
@@ -30,14 +28,6 @@ public class SimpleEventSystem {
 
     public final <T> void addEventConsumer(Class<T> eventClass, Consumer<T> eventConsumer) {
         eventRepository.addEventConsumer(eventClass, eventConsumer);
-    }
-
-    public final <T, R> void addEventFunction(Class<T> eventClass, Function<T, R> eventFunction) {
-        eventRepository.addEventFunction(eventClass, eventFunction);
-    }
-
-    public final <T> void addEventSupplier(Class<T> eventClass, Supplier<T> eventSupplier){
-        eventRepository.addEventSupplier(eventClass, eventSupplier);
     }
 
     public final <T> void publishEvent(T event) {

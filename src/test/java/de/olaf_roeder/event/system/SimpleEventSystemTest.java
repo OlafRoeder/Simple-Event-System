@@ -38,40 +38,4 @@ class SimpleEventSystemTest {
         /* Then */
         Awaitility.await().untilAtomic(success, Matchers.hasToString("test"));
     }
-
-    @RepeatedTest(10)
-    void addEventFunction() {
-
-        /* Given */
-        SimpleEventSystem sut = new SimpleEventSystem();
-        AtomicReference<String> success = new AtomicReference<>();
-        sut.addEventFunction(String.class, string -> {
-            success.set(string);
-            return success.get();
-        });
-
-        /* When */
-        sut.publishEvent("test");
-
-        /* Then */
-        Awaitility.await().untilAtomic(success, Matchers.hasToString("test"));
-    }
-
-    @RepeatedTest(10)
-    void addEventSupplier() {
-
-        /* Given */
-        SimpleEventSystem sut = new SimpleEventSystem();
-        AtomicReference<String> success = new AtomicReference<>();
-        sut.addEventSupplier(String.class, () -> {
-            success.set("test");
-            return success.get();
-        });
-
-        /* When */
-        sut.publishEvent("test");
-
-        /* Then */
-        Awaitility.await().untilAtomic(success, Matchers.hasToString("test"));
-    }
 }

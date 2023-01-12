@@ -8,25 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7a38777-de86-46b9-bb5a-9bd9402a348e" name="Changes" comment="Simple Event System initial commit;">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/concurrency/EventExecutorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/SimpleEventSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/EventDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/system/SimpleEventSystemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/SimpleEventSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/SimpleEventSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/EventDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/EventDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/system/SimpleEventSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/system/SimpleEventSystemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +62,9 @@
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2J9Cvii9dEWNkrVhW0DbqKG43k4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -91,7 +81,7 @@
     "last_opened_file_path": "D:/Java/repos/Simple-Event-System/src/test/resources",
     "rearrange.code.on.save": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editing.templates"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -110,7 +100,7 @@
       <recent name="de.olaf_roeder.event.system" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EventDemo">
+  <component name="RunManager" selected="Gradle.SimpleEventSystemTest">
     <configuration name="EventDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.olaf_roeder.event.EventDemo" />
       <module name="Simple-Event-System.test" />
@@ -225,8 +215,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.EventDemo" />
         <item itemvalue="Gradle.SimpleEventSystemTest" />
+        <item itemvalue="Application.EventDemo" />
         <item itemvalue="Gradle.SimpleEventSystemTest.addEventFunction" />
         <item itemvalue="Gradle.SimpleEventSystemTest.addEventConsumer" />
         <item itemvalue="Gradle.SimpleEventSystemTest.addEventRunnable" />
@@ -242,6 +232,14 @@
       <option name="presentableId" value="Default" />
       <updated>1671481147731</updated>
     </task>
+    <task id="LOCAL-00001" summary="Simple Event System initial commit;">
+      <created>1673554640169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673554640169</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -3,7 +3,6 @@ package de.olaf_roeder.event.system;
 import de.olaf_roeder.concurrency.EventExecutorService;
 
 import java.util.function.Consumer;
-import java.util.function.Function;
 
 class EventPublisher {
 
@@ -20,7 +19,5 @@ class EventPublisher {
     final <T> void publish(T event) {
         eventRepository.getRunnables(event.getClass()).forEach(eventExecutorService::submit);
         eventRepository.getConsumer(event.getClass()).forEach(consumer -> eventExecutorService.submit(() -> ((Consumer<T>) consumer).accept(event)));
-        eventRepository.getFunctions(event.getClass()).forEach(function -> eventExecutorService.submit(() -> ((Function<T, ?>) function).apply(event)));
-        eventRepository.getSuppliers(event.getClass()).forEach(supplier -> eventExecutorService.submit(supplier::get));
     }
 }
