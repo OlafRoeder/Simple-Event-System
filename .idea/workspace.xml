@@ -7,14 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7a38777-de86-46b9-bb5a-9bd9402a348e" name="Changes" comment="Simple Event System initial commit;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/EventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/SimpleEventSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/olaf_roeder/event/system/SimpleEventSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/EventDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/EventDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/system/SimpleEventSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/olaf_roeder/event/system/SimpleEventSystemTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="f7a38777-de86-46b9-bb5a-9bd9402a348e" name="Changes" comment="removed function and supplier events;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673554640169</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="removed function and supplier events;">
+      <created>1673556194767</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673556194767</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,7 +255,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Simple Event System initial commit;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simple Event System initial commit;" />
+    <MESSAGE value="removed function and supplier events;" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed function and supplier events;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Simple_Event_System$SimpleEventSystemTest.ic" NAME="SimpleEventSystemTest Coverage Results" MODIFIED="1673553356056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
