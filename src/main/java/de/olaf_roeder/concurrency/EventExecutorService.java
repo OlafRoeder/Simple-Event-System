@@ -4,6 +4,7 @@ import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.Thread.UncaughtExceptionHandler;
+import java.text.MessageFormat;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
@@ -22,7 +23,7 @@ public class EventExecutorService {
     private static final long TIMEOUT = 1000;
 
     private static final UncaughtExceptionHandler UNCAUGHT_EXCEPTION_HANDLER =
-            (t, e) -> log.error("Thread " + t.getName() + " threw exception " + e.getClass(), e);
+            (t, e) -> log.error(MessageFormat.format("Thread [{0}] threw exception [{1}]", t.getName(), e.getClass()), e);
 
     /**
      * Same as {@link Executors#newWorkStealingPool()} plus custom
@@ -32,7 +33,7 @@ public class EventExecutorService {
             ForkJoinPool.defaultForkJoinWorkerThreadFactory, UNCAUGHT_EXCEPTION_HANDLER, ASYNC_MODE);
 
     public EventExecutorService() {
-        Runtime.getRuntime().addShutdownHook(new Thread("GlobalExecutorService Shutdown Hook") {
+        Runtime.getRuntime().addShutdownHook(new Thread("EventExecutorService Shutdown Hook") {
 
             @Override
             public void run() {
@@ -52,7 +53,7 @@ public class EventExecutorService {
 
         if (EXECUTOR.isShutdown())
             throw new IllegalStateException(
-                    "Executor was shut down. Do not call GlobalExecutorService.submit(Runnable) after GlobalExecutorService.shutdown()!");
+                    "Executor was shut down. Do not call submit(Runnable) after shutdown()!");
 
         EXECUTOR.submit(task);
     }
