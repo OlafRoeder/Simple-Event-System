@@ -1,4 +1,4 @@
-package de.olaf_roeder.event.system;
+package de.olaf_roeder.eventsystem.engine;
 
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
@@ -6,16 +6,16 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
-class EventRepository {
+public class EventRepository {
 
     private final Map<Class<?>, List<Reference<Consumer<?>>>> eventConsumer = new HashMap<>();
     private final Map<Class<?>, List<Reference<Runnable>>> eventRunnables = new HashMap<>();
 
-    final <T> void addEventConsumer(Class<T> eventClass, Consumer<T> consumer) {
+    public final <T> void addEventConsumer(Class<T> eventClass, Consumer<T> consumer) {
         eventConsumer.computeIfAbsent(eventClass, list -> new ArrayList<>()).add(new WeakReference<>(consumer));
     }
 
-    final <T> void addEventRunnable(Class<T> eventClass, Runnable eventRunnable) {
+    public final <T> void addEventRunnable(Class<T> eventClass, Runnable eventRunnable) {
         eventRunnables.computeIfAbsent(eventClass, list -> new ArrayList<>()).add(new WeakReference<>(eventRunnable));
     }
 

@@ -1,4 +1,4 @@
-package de.olaf_roeder.event.system;
+package de.olaf_roeder.eventsystem.api;
 
 import org.awaitility.Awaitility;
 import org.hamcrest.Matchers;

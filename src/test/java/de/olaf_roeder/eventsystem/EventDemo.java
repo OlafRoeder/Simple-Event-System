@@ -1,6 +1,6 @@
-package de.olaf_roeder.event;
+package de.olaf_roeder.eventsystem;
 
-import de.olaf_roeder.event.system.SimpleEventSystem;
+import de.olaf_roeder.eventsystem.api.SimpleEventSystem;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 

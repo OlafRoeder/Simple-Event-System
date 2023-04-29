@@ -1,6 +1,8 @@
-package de.olaf_roeder.event.system;
+package de.olaf_roeder.eventsystem.api;
 
 import de.olaf_roeder.concurrency.EventExecutorService;
+import de.olaf_roeder.eventsystem.engine.EventPublisher;
+import de.olaf_roeder.eventsystem.engine.EventRepository;
 
 import java.util.function.Consumer;
 
