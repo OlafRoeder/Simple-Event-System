@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'de.olaf-roeder'
-version '1.0-SNAPSHOT'
+version '0.1.2-SNAPSHOT'
 
 // LTS until September 2023
 sourceCompatibility = 1.11
