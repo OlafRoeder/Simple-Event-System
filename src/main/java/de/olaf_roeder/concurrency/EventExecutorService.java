@@ -60,7 +60,7 @@ public class EventExecutorService {
 
     private void shutdown() {
 
-        log.debug("Shutting down " + EXECUTOR);
+        log.debug("Shutting down {}", EXECUTOR);
 
         EXECUTOR.shutdown();
 
@@ -68,10 +68,10 @@ public class EventExecutorService {
 
             if (!EXECUTOR.awaitTermination(TIMEOUT, TimeUnit.MILLISECONDS)) {
 
-                EXECUTOR.shutdownNow().forEach(task -> log.debug("Still running task: " + task.getClass()));
+                EXECUTOR.shutdownNow().forEach(task -> log.debug("Still running task: {}", task.getClass()));
 
                 if (!EXECUTOR.awaitTermination(TIMEOUT, TimeUnit.MILLISECONDS))
-                    log.error(EXECUTOR + " could not shut down properly.");
+                    log.error("{} could not shut down properly.", EXECUTOR);
             }
         } catch (InterruptedException e) {
             EXECUTOR.shutdownNow();
