@@ -5,9 +5,10 @@ A simple event system for Java. See EventDemo for examples.
 Basic usage:
 
 ```java
-SimpleEventSystem simpleEventSystem=new SimpleEventSystem();
-        simpleEventSystem.addEventRunnable(SomeEventType.class,()->doStuff());
-        simpleEventSystem.publishEvent(new SomeEventType());
+SimpleEventSystem simpleEventSystem = new SimpleEventSystem();
+
+simpleEventSystem.addEventRunnable(SomeEventType .class, ()-> doStuff());
+simpleEventSystem.publishEvent(new SomeEventType());
 ```
 
 [!] This event system is meant to be a very simple, yet functioning implementation, but it is probably not useful in
