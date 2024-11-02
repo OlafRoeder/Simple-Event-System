@@ -1,39 +1,33 @@
 package de.olaf_roeder.eventsystem.engine;
 
-import java.lang.ref.Reference;
-import java.lang.ref.WeakReference;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class EventRepository {
 
-    private final Map<Class<?>, List<Reference<Consumer<?>>>> eventConsumer = new HashMap<>();
-    private final Map<Class<?>, List<Reference<Runnable>>> eventRunnables = new HashMap<>();
+    private final Map<Class<?>, List<Consumer<?>>> eventConsumer = new HashMap<>();
+    private final Map<Class<?>, List<Runnable>> eventRunnables = new HashMap<>();
 
     public final <T> void addEventConsumer(Class<T> eventClass, Consumer<T> consumer) {
-        eventConsumer.computeIfAbsent(eventClass, list -> new ArrayList<>()).add(new WeakReference<>(consumer));
+        eventConsumer.computeIfAbsent(eventClass, list -> new ArrayList<>()).add(consumer);
     }
 
     public final <T> void addEventRunnable(Class<T> eventClass, Runnable eventRunnable) {
-        eventRunnables.computeIfAbsent(eventClass, list -> new ArrayList<>()).add(new WeakReference<>(eventRunnable));
+        eventRunnables.computeIfAbsent(eventClass, list -> new ArrayList<>()).add(eventRunnable);
     }
 
     final <T> Stream<Consumer<?>> getConsumer(Class<T> eventClass) {
 
-        List<Reference<Consumer<?>>> references = eventConsumer.getOrDefault(eventClass, Collections.emptyList());
+        List<Consumer<?>> consumer = eventConsumer.getOrDefault(eventClass, Collections.emptyList());
 
-        return references.stream()
-                .filter(consumerReference -> consumerReference.get() != null)
-                .map(Reference::get);
+        return consumer.stream();
     }
 
     final <T> Stream<Runnable> getRunnables(Class<T> eventClass) {
 
-        List<Reference<Runnable>> references = eventRunnables.getOrDefault(eventClass, Collections.emptyList());
+        List<Runnable> runnables = eventRunnables.getOrDefault(eventClass, Collections.emptyList());
 
-        return references.stream()
-                .filter(runnableReference -> runnableReference.get() != null)
-                .map(Reference::get);
+        return runnables.stream();
     }
 }
